@@ -24,6 +24,8 @@ Repository pour la SAE21
 
 11 / 04 -> TP -> ralisation du GNS3 des serv par Valentin et shemet fini en .doi par Mathieu
 
+![img_reseau](reseaux_v2.png)
+
 ### notes
 
 dot1q -> trunk
