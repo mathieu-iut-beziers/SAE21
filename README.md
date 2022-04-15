@@ -47,4 +47,5 @@ Dnat :
 
 deux dns un recurcif et un publique
 
-metre sur lme dns pour le WEB-intra l'ip priver 
+metre sur lme dns pour le WEB-intra l'ip priver
+
