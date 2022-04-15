@@ -29,3 +29,22 @@ Repository pour la SAE21
 ### notes
 
 dot1q -> trunk
+
+
+Deux type de nat
+
+source nat (snat)
+
+    trame traduite par le routeur au bieeaux de l'ip src
+    le serv parle au routeur 
+    il suit les numereau de cinexion
+    on ne le voi pas au niveaux ip
+
+Dnat :
+
+    on vas dnat un port
+    ex tout ce quie est connecter au port 80 vas aller jusqu'au serv web
+
+deux dns un recurcif et un publique
+
+metre sur lme dns pour le WEB-intra l'ip priver 
