@@ -7,7 +7,7 @@ Repository pour la SAE21
 -> repartition des taches
 
 * DHCP / WEB interne VALENTIN
-* DMZ + shemat reseaux LUIGI
+* DMZ + schéma reseaux LUIGI
 * DNS / WEB -> DMZ MATHIEU
 
 ## Journal de bord
@@ -18,7 +18,7 @@ Repository pour la SAE21
 
 28 / 03 -> debut de travaille sur nos partie respective
 
-29 / 03 -> creation des git (pour moi creation du shemat)
+29 / 03 -> creation des git (pour moi creation du schéma)
 
 04 / 04 -> suite du travaille
 
