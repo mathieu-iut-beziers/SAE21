@@ -2,7 +2,7 @@
 
 Repository pour la SAE21
 
-=======
+-------
 
 ## Premier jours
 
@@ -12,7 +12,7 @@ Repartition des taches :
 * DMZ / shemat -> reseaux MATHIEU
 * DNS / WEB -> LUIGI
 
-=======
+-------
 
 ## Journal de bord
 
@@ -34,7 +34,7 @@ Repartition des taches :
 
 ![img_reseau](reseaux_v2.png)
 
-=========
+-------
 
 ### notes
 
