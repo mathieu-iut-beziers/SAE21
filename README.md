@@ -6,9 +6,9 @@ Repository pour la SAE21
 
 -> repartition des taches
 
-* DHCP / WEB interne VALENTIN
-* DMZ + shemat reseaux LUIGI
-* DNS / WEB -> DMZ MATHIEU
+* DHCP / WEB-Intranet / ACL -> VALENTIN
+* DMZ / shemat -> reseaux MATHIEU
+* DNS / WEB -> LUIGI
 
 ## Journal de bord
 
@@ -23,6 +23,10 @@ Repository pour la SAE21
 04 / 04 -> suite du travaille
 
 11 / 04 -> TP -> ralisation du GNS3 des serv par Valentin et shemet fini en .doi par Mathieu
+
+14 / 04 -> travaille continuer
+
+15 / 04 -> decouverte et création des deocerfile
 
 ![img_reseau](reseaux_v2.png)
 
@@ -49,3 +53,11 @@ deux dns un recurcif et un publique
 
 metre sur lme dns pour le WEB-intra l'ip priver
 
+
+
+DMZ selon r/mikrotik
+
+On refue toute les conection de l'exterieur sur le routeur
+on vas autoriser les connexion au port 80 qui vas etre rediriger ver le serv web 
+on vas autoriser les conexion au pot 56 qui vas etre rediriger vers le serv DNS
+    
