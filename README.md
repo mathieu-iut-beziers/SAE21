@@ -2,13 +2,17 @@
 
 Repository pour la SAE21
 
+=======
+
 ## Premier jours
 
--> repartition des taches
+Repartition des taches :
 
 * DHCP / WEB-Intranet / ACL -> VALENTIN
 * DMZ / shemat -> reseaux MATHIEU
 * DNS / WEB -> LUIGI
+
+=======
 
 ## Journal de bord
 
@@ -18,7 +22,7 @@ Repository pour la SAE21
 
 28 / 03 -> debut de travaille sur nos partie respective
 
-29 / 03 -> creation des git (pour moi creation du shemat)
+29 / 03 -> creation des git (pour moi creation du schéma)
 
 04 / 04 -> suite du travaille
 
@@ -30,10 +34,11 @@ Repository pour la SAE21
 
 ![img_reseau](reseaux_v2.png)
 
+=========
+
 ### notes
 
 dot1q -> trunk
-
 
 Deux type de nat
 
@@ -53,11 +58,8 @@ deux dns un recurcif et un publique
 
 metre sur lme dns pour le WEB-intra l'ip priver
 
-
-
 DMZ selon r/mikrotik
 
 On refue toute les conection de l'exterieur sur le routeur
-on vas autoriser les connexion au port 80 qui vas etre rediriger ver le serv web 
+on vas autoriser les connexion au port 80 qui vas etre rediriger ver le serv web
 on vas autoriser les conexion au pot 56 qui vas etre rediriger vers le serv DNS
-    
