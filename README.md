@@ -63,3 +63,11 @@ DMZ selon r/mikrotik
 On refue toute les conection de l'exterieur sur le routeur
 on vas autoriser les connexion au port 80 qui vas etre rediriger ver le serv web
 on vas autoriser les conexion au pot 56 qui vas etre rediriger vers le serv DNS
+autorize tout ce qui est establich 
+et on filtre les new
+de mmeme pour les eserv pour les update
+
+
+NAT : 
+
+cree un liste pour chaque sous interface et on leur met le nat pour chacune d'entrelle 

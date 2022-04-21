@@ -1,0 +1,36 @@
+html {
+    background-color:#dbe5e7;
+    }
+body {
+    background-color: rgb(228, 211, 165);
+    }
+h1 {
+    text-align: center;
+    }
+/* question 2 */
+h2,li {
+    color: blue;
+    }
+/* question 2.3 */
+
+p span {
+    font-weight: bold;
+    }
+/* question 2.4 */
+
+p > span {
+    text-decoration: underline;
+    }
+/* question 2.5 */
+table, th, td {
+    border: thin solid black;
+}
+#t1 
+table {
+    margin: 5px auto;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
