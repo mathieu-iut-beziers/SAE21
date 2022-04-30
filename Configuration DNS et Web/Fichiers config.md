@@ -11,7 +11,7 @@
 
 ![img_reseau](etcresolv.png)
 
-![img_reseau](status.png)
+![img_reseau](status.PNG)
 
 ![img_reseau](digverif2.png)
 
