@@ -19,3 +19,7 @@ Apr 30 21:50:36.599 HYPERVISOR: exec_cmd: ethsw set_access_port Switch1 udp-8bb9
 Apr 30 21:50:36.652 HYPERVISOR: exec_cmd: nio create_udp udp-e73b52f1-97c9-44a8-883f-6eef5cf187c7 10052 127.0.0.1 10053 
 Apr 30 21:50:36.652 HYPERVISOR: exec_cmd: ethsw add_nio Switch1 udp-e73b52f1-97c9-44a8-883f-6eef5cf187c7 
 Apr 30 21:50:36.659 HYPERVISOR: exec_cmd: ethsw set_dot1q_port Switch1 udp-e73b52f1-97c9-44a8-883f-6eef5cf187c7 1 
+Apr 30 23:09:38.029 HYPERVISOR: exec_cmd: ethsw delete Switch1 
+Apr 30 23:09:38.122 HYPERVISOR: exec_cmd: hypervisor stop 
+Apr 30 23:09:38.254 HYPERVISOR: Stopped.
+Apr 30 23:09:38.254 GENERAL: reset done.

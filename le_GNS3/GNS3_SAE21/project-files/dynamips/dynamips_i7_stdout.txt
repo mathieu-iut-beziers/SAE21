@@ -1,0 +1,16 @@
+Cisco Router Simulation Platform (version 0.2.14-x86/Linux stable)
+Copyright (c) 2005-2011 Christophe Fillot.
+Build date: Oct  8 2014 11:29:34
+
+Local UUID: 073496b0-7efe-4fb6-a8cd-cac87b337e25
+
+Log file: writing to dynamips_i7_log.txt
+ILT: loaded table "mips64j" from cache.
+ILT: loaded table "mips64e" from cache.
+ILT: loaded table "ppc32j" from cache.
+ILT: loaded table "ppc32e" from cache.
+Hypervisor TCP control server started (IP localhost port 46877).
+Hypervisor: closing control sockets.
+Hypervisor: closing remote client connections.
+Shutdown in progress...
+Shutdown completed.

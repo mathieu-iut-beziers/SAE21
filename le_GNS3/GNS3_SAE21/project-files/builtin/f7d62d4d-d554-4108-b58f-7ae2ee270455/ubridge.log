@@ -3,3 +3,6 @@ Hypervisor TCP control server started (IP localhost port 43739).
 UDP tunnel connecting from local port 10057 to IPv4 address 127.0.0.1 on port 10056
 Source NIO listener thread for f7d62d4d-d554-4108-b58f-7ae2ee270455-0 has started
 Destination NIO listener thread for f7d62d4d-d554-4108-b58f-7ae2ee270455-0 has started
+Hypervisor: closing control sockets.
+Hypervisor: closing remote client connections.
+Hypervisor: stopped.
