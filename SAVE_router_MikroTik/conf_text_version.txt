@@ -1,0 +1,70 @@
+[admin@MikroTik] > export 
+# apr/30/2022 21:31:54 by RouterOS 6.49.6
+# software id = 944W-E5JF
+#
+# model = RB750Gr3
+# serial number = CC210ED20FBE
+/interface bridge
+add admin-mac=2C:C8:1B:06:AE:44 auto-mac=no comment=defconf name=bridge
+/interface list
+add comment=defconf name=WAN
+add comment=defconf name=LAN
+/interface wireless security-profiles
+set [ find default=yes ] supplicant-identity=MikroTik
+/ip pool
+add name=default-dhcp ranges=192.168.88.10-192.168.88.254
+/ip dhcp-server
+add address-pool=default-dhcp interface=bridge name=defconf
+/interface bridge port
+add bridge=bridge comment=defconf interface=ether2
+add bridge=bridge comment=defconf interface=ether3
+add bridge=bridge comment=defconf interface=ether4
+add bridge=bridge comment=defconf interface=ether5
+/ip neighbor discovery-settings
+set discover-interface-list=LAN
+/interface list member
+add comment=defconf interface=bridge list=LAN
+add comment=defconf interface=ether1 list=WAN
+/ip address
+add address=192.168.40.254/24 comment=defconf interface=bridge network=192.168.40.0
+/ip dhcp-client
+add comment=defconf disabled=no interface=ether1
+/ip dhcp-server network
+add address=192.168.40.0/24 comment=defconf dns-server=192.168.88.1 gateway=192.168.40.254 \
+    netmask=24
+/ip dns
+set allow-remote-requests=yes
+/ip dns static
+add address=192.168.40.254 comment=defconf name=router.lan
+/ip firewall filter
+add action=accept chain=input connection-state=established,related
+add action=accept chain=input protocol=icmp
+add action=drop chain=input in-interface-list=!LAN
+add action=accept chain=forward connection-state=established,related,new dst-port=80 \
+    in-interface=ether1 protocol=tcp
+add action=accept chain=forward connection-state=established,related,new dst-port=443 \
+    in-interface=ether1 protocol=tcp
+add action=accept chain=forward connection-state=established,related,new dst-port=53 \
+    in-interface=ether1 protocol=udp
+add action=accept chain=forward connection-state=established,related
+add action=drop chain=forward connection-state=invalid
+add action=drop chain=forward connection-nat-state=!dstnat connection-state=new \
+    in-interface-list=WAN
+add action=accept chain=forward connection-state=established,related,new in-bridge-port-list=\
+    LAN
+/ip firewall nat
+add action=masquerade chain=srcnat comment="defconf: masquerade" ipsec-policy=out,none \
+    out-interface-list=WAN
+add action=dst-nat chain=dstnat dst-port=80 in-interface=ether1 protocol=tcp src-port=\
+    !32768-61000 to-addresses=192.168.40.80 to-ports=80
+add action=dst-nat chain=dstnat dst-port=443 in-interface=ether1 protocol=tcp src-port=\
+    !32768-61000 to-addresses=192.168.40.80 to-ports=443
+add action=dst-nat chain=dstnat dst-port=53 in-interface=ether1 protocol=udp src-port=\
+    !54-61000 to-addresses=192.168.40.53 to-ports=53
+/system clock
+set time-zone-name=Europe/Paris
+/tool mac-server
+set allowed-interface-list=LAN
+/tool mac-server mac-winbox
+set allowed-interface-list=LAN
+
