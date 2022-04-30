@@ -26,7 +26,6 @@ Nous avons réalisé la partie virtuelle sur GNS3, et pour le bon fonctionnement
 
 ![gns](gns_img.png)
 
-
 Téléchargement du projet [GNS3](https://drive.google.com/file/d/16yy1haQ8j_t45c1lM88H1utn2LDdvxOf/view?usp=sharing)
 
 Voici la configuration du routeur Cisco du projet, dans lequel on peut voir les ACL des VLAN et le serveur DHCP :
