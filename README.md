@@ -73,34 +73,34 @@ NAT :
 cree un liste pour chaque sous interface et on leur met le nat pour chacune d'entrelle
 
 
-[admin@MikroTik] /ip firewall> export 
-# apr/30/2022 21:20:43 by RouterOS 6.49.6
-# software id = 944W-E5JF
-#
-# model = RB750Gr3
-# serial number = CC210ED20FBE
-/ip firewall filter
-add action=accept chain=input connection-state=established,related
-add action=accept chain=input protocol=icmp
-add action=drop chain=input in-interface-list=!LAN
-add action=accept chain=forward connection-state=established,related,new dst-port=80 \
-    in-interface=ether1 protocol=tcp
-add action=accept chain=forward connection-state=established,related,new dst-port=443 \
-    in-interface=ether1 protocol=tcp
-add action=accept chain=forward connection-state=established,related,new dst-port=53 \
-    in-interface=ether1 protocol=udp
-add action=accept chain=forward connection-state=established,related
-add action=drop chain=forward connection-state=invalid
-add action=drop chain=forward connection-nat-state=!dstnat connection-state=new \
-    in-interface-list=WAN
-add action=accept chain=forward connection-state=established,related,new in-bridge-port-list=\
-    LAN
-/ip firewall nat
-add action=masquerade chain=srcnat comment="defconf: masquerade" ipsec-policy=out,none \
-    out-interface-list=WAN
-add action=dst-nat chain=dstnat dst-port=80 in-interface=ether1 protocol=tcp src-port=\
-    !32768-61000 to-addresses=192.168.40.80 to-ports=80
-add action=dst-nat chain=dstnat dst-port=443 in-interface=ether1 protocol=tcp src-port=\
-    !32768-61000 to-addresses=192.168.40.80 to-ports=443
-add action=dst-nat chain=dstnat dst-port=53 in-interface=ether1 protocol=udp src-port=\
-    !54-61000 to-addresses=192.168.40.53 to-ports=53
+    [admin@MikroTik] /ip firewall> export 
+    # apr/30/2022 21:20:43 by RouterOS 6.49.6
+    # software id = 944W-E5JF
+    #
+    # model = RB750Gr3
+    # serial number = CC210ED20FBE
+    /ip firewall filter
+    add action=accept chain=input connection-state=established,related
+    add action=accept chain=input protocol=icmp
+    add action=drop chain=input in-interface-list=!LAN
+    add action=accept chain=forward connection-state=established,related,new dst-port=80 \
+        in-interface=ether1 protocol=tcp
+    add action=accept chain=forward connection-state=established,related,new dst-port=443 \
+        in-interface=ether1 protocol=tcp
+    add action=accept chain=forward connection-state=established,related,new dst-port=53 \
+        in-interface=ether1 protocol=udp
+    add action=accept chain=forward connection-state=established,related
+    add action=drop chain=forward connection-state=invalid
+    add action=drop chain=forward connection-nat-state=!dstnat connection-state=new \
+        in-interface-list=WAN
+    add action=accept chain=forward connection-state=established,related,new in-bridge-port-list=\
+        LAN
+    /ip firewall nat
+    add action=masquerade chain=srcnat comment="defconf: masquerade" ipsec-policy=out,none \
+        out-interface-list=WAN
+    add action=dst-nat chain=dstnat dst-port=80 in-interface=ether1 protocol=tcp src-port=\
+        !32768-61000 to-addresses=192.168.40.80 to-ports=80
+    add action=dst-nat chain=dstnat dst-port=443 in-interface=ether1 protocol=tcp src-port=\
+        !32768-61000 to-addresses=192.168.40.80 to-ports=443
+    add action=dst-nat chain=dstnat dst-port=53 in-interface=ether1 protocol=udp src-port=\
+        !54-61000 to-addresses=192.168.40.53 to-ports=53
