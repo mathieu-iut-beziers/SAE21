@@ -1,34 +1,35 @@
-# SAE 21 [ Docker Coorporation ]
+# SAE 21 [ Docker Corporation ]
 
 ## Notre entreprise
 
-Notre entreprise a realiser un shetmat d'adressage d'un reseaux, composer de 4 VLAN.
+Notre entreprise a réalisé un schéma d'adressage d'un réseau, composé de 4 VLAN.
+
 ![RESEAU](le_reseau.png)
 
-Ce resau repartie les diferant service en VLAN avec la repartition suivante (le nom des VLAN est incrit dans leur adresse IP) :
+Ce réseau répartit les différents services en VLAN avec la répartition suivante : (le nom des VLAN est inscrit dans leur adresse IP) :
 
-* 10 Admininstratifs
+* 10 Administratif
 * 20 Commercial
 * 30 Service Informatique
 
-Le serveur WEB interne a sont propre VLAN.
-Notre entreprise a choisit de metre le serveur DHCP sur le routeur pour reduire le nombre de machine sur le reseaux et faciliter la configuration.
-D'autrepart nous avont fait le choix de metre un Switch par VLAN pour faciliter son administratiuon et simplifier le schemat.
+Le serveur WEB interne a son propre VLAN.
+Notre entreprise a choisi de mettre le serveur DHCP sur le routeur pour réduire le nombre de machines sur le réseau et faciliter la configuration.
+D'autre part, nous avons fait le choix de mettre un Switch par VLAN pour faciliter son administration et simplifier le schéma.
 
-Nous avont fait le choix de realiser une DMZ privé pour contenant le serveur DNS et WEB qui sont accesible depuis l'exterieur.
+Nous avons fait le choix de réaliser une DMZ privée pour contenir le serveur DNS et WEB qui sont accessibles depuis l'extérieur.
 
 ------
 
 ## La partie GNS3
 
-Nous avont realiser la partie virtuelle sur GNS3, est pour le bon fonctionement de notre projet nous avont realiser des Dockers pour les PC clients. (Les Dockers files sont present dans le repository)
+Nous avons réalisé la partie virtuelle sur GNS3, et pour le bon fonctionnement de notre projet nous avons réalisé des Dockers pour les PC clients. (Les Dockers Files sont présents dans le repository).
 
 ![gns](gns_img.png)
 
 
-Telechargement du projets [GNS3](https://drive.google.com/file/d/16yy1haQ8j_t45c1lM88H1utn2LDdvxOf/view?usp=sharing)
+Téléchargement du projet [GNS3](https://drive.google.com/file/d/16yy1haQ8j_t45c1lM88H1utn2LDdvxOf/view?usp=sharing)
 
-Voici la configuration du routeur cisco du projet, dans la quel on peut voir les ACL des VLAN et le serveur DHCP :
+Voici la configuration du routeur Cisco du projet, dans lequel on peut voir les ACL des VLAN et le serveur DHCP :
 
     R1#sh run
     Building configuration...
@@ -156,9 +157,9 @@ Voici la configuration du routeur cisco du projet, dans la quel on peut voir les
 
 ## La partie physique
 
-Le routeur filtrant utiliser est un MikroTik, il a etais utiliser pour realiser le DNAT necaisiare pour metre en place le serveur WEB extaire et le DNS. Deplus quelque regle de filtrage on etais rajouter pour ajouter de la securiter.
+Le routeur filtrant utilisé est un MikroTik, il a été utilisé pour réaliser le DNAT nécéssaire pour mettre en place le serveur WEB externe et le DNS. De plus quelque règles de filtrage on été rajoutées pour ajouter de la sécurité.
 
-Voici la configuration complete du routeur MikroTik :
+Voici la configuration complète du routeur MikroTik :
 
     [admin@MikroTik] > export 
     # apr/30/2022 23:27:49 by RouterOS 6.49.6
@@ -231,14 +232,14 @@ Voici la configuration complete du routeur MikroTik :
     /tool mac-server mac-winbox
     set allowed-interface-list=LAN
 
-Deplus une sauvegarde de la configuration est diponible dans ce repository.
+De plus, une sauvegarde de la configuration est disponible dans ce repository.
 
 ### DNS & WEB de la DMZ
 
-Cette partie est expliquer [ici](./Configuration%20DNS%20et%20Web/Fichiers%20config.md)
+Cette partie est expliquée [ici](./Configuration%20DNS%20et%20Web/Fichiers%20config.md)
 
 ------
 
 ## Pour finir
 
-Tout les autres document comme la page WEB realiser sont disponible dans le GIT de la SAE.
+Tous les autres documents comme la page WEB réalisée sont disponibles dans le GIT de la SAE.
